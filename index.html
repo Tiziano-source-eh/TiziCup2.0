@@ -36,13 +36,6 @@
       overflow: hidden;
     }
 
-    @media (max-width: 900px) {
-      .page {
-        grid-template-columns: 1fr;
-        padding: 1.5rem;
-      }
-    }
-
     .glow {
       position: absolute;
       inset: -120px;
@@ -93,16 +86,6 @@
       box-shadow:
         0 0 22px rgba(0,0,0,1),
         0 0 34px rgba(252,211,77,0.9);
-    }
-
-    @media (max-width: 900px) {
-      .top-row {
-        flex-direction: row;
-        align-items: flex-start;
-      }
-      .logo {
-        width: 120px;
-      }
     }
 
     .subtitle {
@@ -335,6 +318,42 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
+
+    /* MOBILE-OPTIMIERUNG */
+    @media (max-width: 900px) {
+      body {
+        display: block;
+        padding: 0.75rem;
+      }
+
+      .page {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+        margin: 0 auto;
+      }
+
+      .top-row {
+        align-items: flex-start;
+      }
+
+      h1 {
+        letter-spacing: 0.18em;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 1rem;
+      }
+
+      .logo {
+        width: 110px;
+      }
+
+      .chips {
+        gap: 0.35rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -374,9 +393,6 @@
           3. Abschicken – fertig, deine Anmeldung ist eingegangen.
         </div>
 
-        <!-- HIER DEINE WHATSAPP-NUMMER EINTRAGEN -->
-        <!-- Format: https://wa.me/LÄNDERVORWAHLNUMMER?text=... -->
-        <!-- Beispiel: https://wa.me/4917012345678?... für +49 170 12345678 -->
         <a
           class="cta-button"
           href="https://wa.me/4915750702219?text=Fortnite%20Tizi%20Cup%202.0%20-%20Anmeldung%0A%0ABitte%20f%C3%BClle%20die%20Infos%20ein%20und%20schick%20mir%20die%20Nachricht%3A%0A%0AVollst%C3%A4ndiger%20Name%3A%20%0AFortnite%20Name%3A%20%0AGeburtsdatum%3A%20%0ADuo-Mate%3A%20%0AGrund%2C%20warum%20du%20mitspielst%20(min.%201%20Satz)%3A%20%0AVorschl%C3%A4ge%20zur%20Optimierung%20des%20Cups%3A%20%0AWillst%20du%20etwas%20spenden%3F%20Wenn%20ja%2C%20wie%20viel%3F%20(Das%20Geld%20erh%C3%B6ht%20das%20Preisgeld%20positiv.)%0A"
@@ -393,17 +409,23 @@
         </div>
       </div>
 
-      
+      <div class="questions-box">
+        <strong>Diese Infos musst du in WhatsApp ausfüllen:</strong>
+        <ul class="questions-list">
+          <li>Vollständiger Name</li>
+          <li>Fortnite Name</li>
+          <li>Geburtsdatum</li>
+          <li>Duo-Mate (Name / Fortnite Name)</li>
+          <li>Grund, warum du mitspielst (mindestens 1 Satz)</li>
+          <li>Vorschläge zur Optimierung des Cups</li>
+          <li>Willst du etwas spenden? Wenn ja, wie viel? (Geld erhöht das Preisgeld)</li>
+        </ul>
+      </div>
     </section>
 
     <!-- RECHTE SPALTE -->
     <section class="col">
       <div class="details-title">Cup Details</div>
-
-      
-        
-        
-      </div>
 
       <div class="info-card">
         <strong>Wer darf mitspielen?</strong>
